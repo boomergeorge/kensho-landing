@@ -13,7 +13,7 @@ function useScrollReveal() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add("animate-fade-in-up");
+          el.classList.add("animate-scroll-reveal");
           observer.unobserve(el);
         }
       },
@@ -34,7 +34,7 @@ function Section({
 }) {
   const ref = useScrollReveal();
   return (
-    <div ref={ref} className={`opacity-0 ${className}`}>
+    <div ref={ref} className={className}>
       {children}
     </div>
   );
@@ -162,12 +162,12 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="max-w-5xl mx-auto px-6 py-24">
+      <section className="max-w-5xl mx-auto px-6 py-12">
         <Section>
           <h2 className="text-3xl sm:text-4xl font-light text-center mb-4">
             What is Kensho?
           </h2>
-          <p className="text-neutral-500 text-center max-w-2xl mx-auto mb-16">
+          <p className="text-neutral-500 text-center max-w-2xl mx-auto mb-10">
             A desktop app that creates a personal Markdown vault on your
             computer. Pair it with AI to journal, reflect, discover patterns,
             and gain self-knowledge.
@@ -190,13 +190,13 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="max-w-3xl mx-auto px-6 py-24">
+      <section className="max-w-3xl mx-auto px-6 py-12">
         <Section>
-          <h2 className="text-3xl sm:text-4xl font-light text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-light text-center mb-10">
             How it works
           </h2>
         </Section>
-        <div className="space-y-12">
+        <div className="space-y-8">
           {[
             {
               step: "01",
@@ -230,7 +230,7 @@ export default function Home() {
       </section>
 
       {/* System Requirements */}
-      <section className="max-w-3xl mx-auto px-6 py-24">
+      <section className="max-w-3xl mx-auto px-6 py-12">
         <Section>
           <h2 className="text-3xl sm:text-4xl font-light text-center mb-4">
             Requirements
@@ -289,7 +289,7 @@ export default function Home() {
       </section>
 
       {/* Download */}
-      <section className="px-6 py-32">
+      <section className="px-6 py-16">
         <Section>
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl sm:text-5xl font-light mb-4">
