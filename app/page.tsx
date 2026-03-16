@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 const DOWNLOAD_URL =
-  "https://github.com/boomergeorge/kensho/releases/latest/download/Kensho_0.1.0_aarch64.dmg";
+  "https://github.com/boomergeorge/kensho/releases/download/production/Kensho_0.1.0_aarch64.dmg";
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
